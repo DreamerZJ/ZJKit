@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import ZJKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ZJViewBuild {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        buildViews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,5 +21,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension ViewController {
+
+    func createViewTree() {
+        print("创建视图")
+    }
+
+    func layoutViews() {
+        print("布局视图")
+    }
+
+    func configViews() {
+        print("配置视图")
+    }
 }
 

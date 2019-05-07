@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A979732281211C00632541 /* ZJKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A979722281211C00632541 /* ZJKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -14,7 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		96ED15EEE109FFA14E650422 /* Pods_ZJKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B77F21B7E456065D17E1C4 /* Pods_ZJKit_Tests.framework */; };
-		A536890C0838AF19368CFC5A /* Pods_ZJKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4F54A7F93D806F24C15178 /* Pods_ZJKit_Example.framework */; };
+		A536890C0838AF19368CFC5A /* Pods_ZJKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4F54A7F93D806F24C15178 /* Pods_ZJKit_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,8 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		20E068239DA378DA8B773274 /* ZJKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZJKit.podspec; path = ../ZJKit.podspec; sourceTree = "<group>"; };
-		2C3FAD94E7857650B93C4531 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		04A979702281201600632541 /* ZJKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZJKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A979722281211C00632541 /* ZJKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZJKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20E068239DA378DA8B773274 /* ZJKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZJKit.podspec; path = ../ZJKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2C3FAD94E7857650B93C4531 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ZJKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +45,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8306A215D035CFB127E3FC03 /* Pods-ZJKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZJKit_Tests/Pods-ZJKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5458AFD0916A2F1FDDCD393 /* Pods-ZJKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-ZJKit_Tests/Pods-ZJKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		BC0286E7122561E21D522783 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BC0286E7122561E21D522783 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BC4F54A7F93D806F24C15178 /* Pods_ZJKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B77F21B7E456065D17E1C4 /* Pods_ZJKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75FBE1BE116B6ECB126B27C /* Pods-ZJKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJKit_Example.release.xcconfig"; path = "Target Support Files/Pods-ZJKit_Example/Pods-ZJKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A979732281211C00632541 /* ZJKit.framework in Frameworks */,
 				A536890C0838AF19368CFC5A /* Pods_ZJKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,13 +151,14 @@
 				8306A215D035CFB127E3FC03 /* Pods-ZJKit_Tests.debug.xcconfig */,
 				A5458AFD0916A2F1FDDCD393 /* Pods-ZJKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		B0AF0D3A7677A5C4D0D3C3FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04A979722281211C00632541 /* ZJKit.framework */,
+				04A979702281201600632541 /* ZJKit.framework */,
 				BC4F54A7F93D806F24C15178 /* Pods_ZJKit_Example.framework */,
 				C0B77F21B7E456065D17E1C4 /* Pods_ZJKit_Tests.framework */,
 			);
@@ -213,10 +218,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 8K7C8BMA47;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 8K7C8BMA47;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +234,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -482,6 +490,7 @@
 			baseConfigurationReference = F82DADA9AE20FC51190BBF79 /* Pods-ZJKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8K7C8BMA47;
 				INFOPLIST_FILE = ZJKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -497,6 +506,7 @@
 			baseConfigurationReference = F75FBE1BE116B6ECB126B27C /* Pods-ZJKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8K7C8BMA47;
 				INFOPLIST_FILE = ZJKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -511,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8306A215D035CFB127E3FC03 /* Pods-ZJKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 8K7C8BMA47;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -533,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5458AFD0916A2F1FDDCD393 /* Pods-ZJKit_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 8K7C8BMA47;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
