@@ -24,7 +24,7 @@ extension ZJViewBuild {
         configViews()
     }
 
-    func createViewTree() {}
-    func layoutViews() {}
-    func configViews() {}
+    public func createViewTree() {}
+    public func layoutViews() {}
+    public func configViews() {}
 }
