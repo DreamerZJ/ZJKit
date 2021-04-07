@@ -11,6 +11,12 @@ import ZJKit
 
 class ViewController: UIViewController, ZJViewBuild {
 
+    let btn = UIButton()
+    let control = UIControl()
+    let label = UILabel().next {
+        $0.textAlignment = .center
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         buildViews()
@@ -21,12 +27,30 @@ class ViewController: UIViewController, ZJViewBuild {
         // Dispose of any resources that can be recreated.
     }
 
+    @objc func clickBtn() {
+        print("点击了按钮")
+    }
 }
 
 extension ViewController {
 
     func createViewTree() {
-        print("创建视图")
+        btn.frame = CGRect.init(x: 100, y: 100, width: 80, height: 60)
+        btn.acceptInterval = 4
+        btn.enlargeEdgeInsets = UIEdgeInsets.init(top: 20, left: 0, bottom: 20, right: 0)
+        btn.backgroundColor = UIColor.red
+        btn.setTitle("点击", for: .normal)
+        btn.setTitleColor(UIColor.yellow, for: .normal)
+        btn.addTarget(self, action: #selector(clickBtn), for: .touchUpInside)
+        view.addSubview(btn)
+
+        control.backgroundColor = UIColor.black
+        control.frame = CGRect.init(x: 100, y: 200, width: 80, height: 60)
+        control.addTarget(self, action: #selector(clickBtn), for: .touchUpInside)
+        view.addSubview(control)
+
+        print("abcd".zj.subStr(2, 3))
+        
     }
 
     func layoutViews() {

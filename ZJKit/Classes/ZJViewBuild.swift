@@ -9,7 +9,7 @@
 import Foundation
 
 
-/// 创建view协议
+/// 创建view协议，划分为创建、布局、配置
 public protocol ZJViewBuild {
     func createViewTree()
     func layoutViews()

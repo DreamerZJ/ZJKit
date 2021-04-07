@@ -275,15 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZJKit_Example/Pods-ZJKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ZJKit/ZJKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZJKit.framework",
 			);
