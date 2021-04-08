@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Int扩展
 // point转pixel
 public extension Int {
 
@@ -20,7 +21,7 @@ public extension Int {
     }
 }
 
-
+// MARK: - NSObject扩展
 public extension NSObject {
 
     /// 方法交换
@@ -39,6 +40,7 @@ public extension NSObject {
     }
 }
 
+// MARK: - UIbutton扩展
 private var touchEdgeInsetsKey: Void?
 private var intervalKey: Void?
 public extension UIButton {
@@ -121,8 +123,52 @@ public extension UIButton {
     }
 }
 
+private var actionKey: Void?
+public extension UIButton {
+
+    var block: ((UIButton) -> Void)? {
+        get {
+            objc_getAssociatedObject(self, &actionKey) as? (UIButton) -> Void
+        }
+
+        set {
+            objc_setAssociatedObject(self, &actionKey, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+        }
+    }
+
+    @objc func touchAction() {
+        self.block?(self)
+    }
+
+    /// 添加事件block
+    /// - Parameters:
+    ///   - block: 事件block
+    ///   - event: 事件类型
+    func addActionBlock(_ block: @escaping ((UIButton) -> Void), for event: UIControlEvents = .touchUpInside) {
+        self.block = block
+        self.addTarget(self, action: #selector(self.touchAction), for: event)
+    }
+
+
+    /// 快速创建带事件block的UIButton
+    /// - Parameters:
+    ///   - action: 事件block
+    ///   - event: 事件类型
+    /// - Returns: 按钮
+    class func button(with action: @escaping ((UIButton) -> Void), for event: UIControlEvents = .touchUpInside) -> UIButton {
+        let btn = UIButton()
+        btn.addActionBlock(action, for: event)
+        return btn
+    }
+}
+
+// MARK: - String扩展
 public extension String {
     static let random_str_characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    /// 固定长度的随机字符串
+    /// - Parameter len: 长度
+    /// - Returns: 随机字符串
     static func randomStr(len : Int) -> String{
         var ranStr = ""
         for _ in 0..<len {
@@ -130,5 +176,24 @@ public extension String {
             ranStr.append(random_str_characters[random_str_characters.index(random_str_characters.startIndex, offsetBy: index)])
         }
         return ranStr
+    }
+}
+
+// MARK: - Timer扩展
+public extension Timer {
+
+    /// 不存在循环引用的计时器调用方式
+    /// - Parameters:
+    ///   - timeInterval: 时间间隔
+    ///   - repeats: 是否重复，默认为true
+    ///   - block: 回调block
+    /// - Returns: 计时器
+    class func start(timeInterval: TimeInterval, repeats: Bool = true, block: @escaping (Timer) -> Void) -> Timer? {
+        if #available(iOS 10.0, *) {
+            let time = Timer.init(timeInterval: timeInterval, repeats: repeats, block: block)
+            RunLoop.current.add(time, forMode: .commonModes)
+            return time
+        }
+        return nil
     }
 }

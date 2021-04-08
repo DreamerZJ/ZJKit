@@ -28,7 +28,8 @@ class ViewController: UIViewController, ZJViewBuild {
     }
 
     @objc func clickBtn() {
-        print("点击了按钮")
+        let vc = NextViewController()
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
